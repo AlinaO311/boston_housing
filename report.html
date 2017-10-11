@@ -12190,7 +12190,7 @@ Standard deviation of prices: $165,171.13
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> As the name suggests, learning algorithms 'learn' from a subset of test data by 'teaching' a program the traits for which to predict the outcome of future data. If an algorithm was developed by using all data points the algorithm would only recognize the specific traits of all the points in the data and either overfit or underfit the data. Breaking data into training and test sets ensures there is little to no bias.</p>
+<p><strong>Answer: </strong> A testing set serves as a test of independent data to simulate the performance of the model on future data. Being able to test the model with an independent dataset can help detect whether there is bias in our model and how predictive the algorithm might be on other independent data or whether there is a more optimal model available.</p>
 
 </div>
 </div>
@@ -13833,7 +13833,7 @@ According to the graph from Question 5, the model that would best generalize to 
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>k-fold cross validation is where you would break data into testing and training sets but, split the training data into random subsets of testing and training data within the training data.With these randomized subsets, we can cross-validate the scores from each different selection to optimize the predictiveness of our algorithm. This optimization is done by selecting the parameters that produced the best validation score. K-fold cross validation is helpful to grid search by providing different combinations of training and test data for which to evaluate the parameter combinations that are generated through grid search. Grid search without the use of k-fold validation would likely find the best model for one set of test/train data but, would not produce the most optimal algorithm for predicting future untrained data.</p>
+<p>k-fold cross validation is where you would break data into k sized testing and training sets or folds but, split the training data into random subsets of testing and training data within the training data. With these randomized k subsets, or folds, we can cross-validate the scores from each different k fold selection to optimize the predictiveness of our algorithm. We would use the k subsets of the original data as training data and the remaining data as the test data. At the end of the K-training, we would select the model that prduced the smallest cross-validation error. K-fold cross validation is helpful to grid search by providing different combinations of training and test data for which to evaluate the parameter combinations that are generated through grid search. Grid search without the use of k-fold validation would likely find the best model for one set of test/train data but, would not produce the most optimal algorithm for predicting future untrained data.</p>
 
 </div>
 </div>
